@@ -1,0 +1,125 @@
+:root{
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+    --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --color-very-light-gray: hsl(0, 0%, 95%);
+    --text-size: 1.5rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 375px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+
+}
+
+.box{
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.box1{
+    background-color: var(--color-bright-orange);
+    border-radius: 8px 8px 0 0;
+}
+
+.box2{
+    background-color: var(--color-dark-cyan);
+}
+
+.box3{
+    background-color: var(--color-very-dark-cyan);
+    border-radius: 0 0 8px 8px;
+}
+
+img{
+    width: 60px;
+    height: 36px;
+}
+
+
+h1{
+    color: var(--color-very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3.5rem;
+}
+
+p{
+    color: var(--color-transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: var(--text-size);
+}
+
+.button{
+    background-color: var(--color-very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 2px solid var(--color-transparent-white);
+    width: fit-content;
+    padding: 14px 36px;
+    border-radius: 28px;
+}
+
+.box1 > .button{
+    color: var(--color-bright-orange);
+}
+.box2 > .button{
+    color: var(--color-dark-cyan);
+}
+.box3 > .button{
+    color: var(--color-very-dark-cyan);
+}
+.button:active{
+    background-color: transparent;
+    color: var(--color-transparent-white);
+    border: 2px solid var(--color-transparent-white);
+    width: fit-content;
+    height: fit-content;
+}
+
+@media (min-width: 1440px){
+    main{
+        flex-direction: row;
+        width: fit-content;
+    }
+
+    .box{
+        width: 305px;
+    }
+
+    .box1{
+        border-radius: 8px 0 0 8px;
+    }
+    
+    .box3{
+        border-radius: 0px 8px 8px 0px;
+    }
+
+    .button{
+        margin: 64px 0 0 0;
+    }
+}
